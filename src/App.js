@@ -36,7 +36,7 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
-import { SiCsharp } from "react-icons/si";
+// import { SiCsharp } from "react-icons/si";
 import { SiCplusplus } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { FaAngular } from "react-icons/fa";
@@ -129,8 +129,8 @@ function App() {
           "CSS",
           <FaJava className="skillset-icon" />,
           "Java",
-          <SiCsharp className="skillset-icon" />,
-          "C#",
+          // <SiCsharp className="skillset-icon" />,
+          // "C#",
           <SiCplusplus className="skillset-icon" />,
           "C++",
           <SiTypescript className="skillset-icon" />,
@@ -237,14 +237,12 @@ function App() {
             githubLink="https://github.com/ethxn2021/COMP600-GarageGlide-GroupProject"
             projectInformation="The Garage Glide project presents a web-based platform for facilitating  and managing car maintenance and repair services. The primary objective is to provide a seamless and efficient experience for both car owners and the auto repair shop staff."
             deploymentLink={null}
-            imgPlaceHolder={
-              [
-                // finalYearProj1,
-                // finalYearProj2,
-                // finalYearProj3,
-                // finalYearProj4,
-              ]
-            }
+            imgPlaceHolder={[
+              finalYearProj1,
+              finalYearProj2,
+              finalYearProj3,
+              finalYearProj4,
+            ]}
           />
         </div>
         <div>

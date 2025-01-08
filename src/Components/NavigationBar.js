@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { MdOutlineDesignServices } from "react-icons/md";
@@ -13,61 +13,75 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-
-
 
 const NavigationBar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const handleHomeClick = () => {
-    window.scrollTo(0, document.body.scrollHeight / 100);
-  };
-  const handleContactClick = () => {
-    window.scrollTo(0, document.body.scrollHeight);
-  };
-  const handlePortfoliosClick = () => {
-    window.scrollTo(0, document.body.scrollHeight / 2.1);
-  };
-  const handleSkillsClick = () => {
-    window.scrollTo(0, document.body.scrollHeight / 7.5);
+
+  const scrollToSection = (position) => {
+    window.scrollTo({
+      top: position,
+      behavior: "smooth",
+    });
   };
 
   const navBarOptions = [
     {
       text: "Home",
-      icon: <HomeIcon/>,
-      onClick: handleHomeClick
+      icon: <HomeIcon />,
+      position: 10,
     },
     {
       text: "Skills",
-      icon: <FaCode/>,
-      onClick: handleSkillsClick
+      icon: <FaCode />,
+      position: document.body.scrollHeight / 7.5,
     },
     {
       text: "Portfolios",
-      icon: <InfoIcon/>,
-      onClick: handlePortfoliosClick
+      icon: <MdOutlineDesignServices />,
+      position: document.body.scrollHeight / 2.1,
     },
     {
       text: "Contact",
-      icon: <PhoneRoundedIcon/>,
-      onClick: handleContactClick
+      icon: <PhoneRoundedIcon />,
+      position: document.body.scrollHeight,
     },
-  ]
-
+  ];
 
   return (
-    <nav>
-      <div className="navbar-links-container">
-        <a href="#home" onClick={handleHomeClick}> Home</a>
-        <a href="#Skills" onClick={handleSkillsClick}> <FaCode className="navBar-icon"/> Skills</a>
-        <a href="#portfolios" onClick={handlePortfoliosClick}> <MdOutlineDesignServices className="navBar-icon"/> Projects</a>
-        <a href="#contact" onClick={handleContactClick}> <RiContactsBook3Fill className="navBar-icon"/> Contact</a>
+    <nav style={styles.navbar}>
+      <div style={styles.linksContainer}>
+        <a style={styles.link} onClick={() => scrollToSection(0)} href="#home">
+          Home
+        </a>
+        <a
+          style={styles.link}
+          onClick={() => scrollToSection(document.body.scrollHeight / 7.5)}
+          href="#skills"
+        >
+          <FaCode style={styles.icon} /> Skills
+        </a>
+        <a
+          style={styles.link}
+          onClick={() => scrollToSection(document.body.scrollHeight / 2.1)}
+          href="#portfolios"
+        >
+          <MdOutlineDesignServices style={styles.icon} /> Projects
+        </a>
+        <a
+          style={styles.link}
+          onClick={() => scrollToSection(document.body.scrollHeight)}
+          href="#contact"
+        >
+          <RiContactsBook3Fill style={styles.icon} /> Contact
+        </a>
       </div>
 
-      <div className="navbar-menu-container">
-        <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
+      <div style={styles.menuContainer}>
+        <HiOutlineBars3
+          style={styles.menuIcon}
+          onClick={() => setOpenMenu(true)}
+        />
       </div>
 
       <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
@@ -80,7 +94,7 @@ const NavigationBar = () => {
           <List>
             {navBarOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton onClick={item.onClick}>
+                <ListItemButton onClick={() => scrollToSection(item.position)}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
@@ -90,10 +104,56 @@ const NavigationBar = () => {
           <Divider />
         </Box>
       </Drawer>
-
-
     </nav>
   );
+};
+
+// Inline styles for simplicity
+const styles = {
+  navbar: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "1rem",
+    backgroundColor: "#282c34",
+    color: "white",
+    position: "fixed",
+    width: "100%",
+    top: 0,
+    zIndex: 1000,
+  },
+  linksContainer: {
+    display: "flex",
+    gap: "1.5rem",
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "1rem",
+    cursor: "pointer",
+    transition: "color 0.3s",
+  },
+  icon: {
+    marginRight: "0.5rem",
+  },
+  linkHover: {
+    color: "#61dafb",
+  },
+  menuContainer: {
+    display: "none",
+    cursor: "pointer",
+  },
+  menuIcon: {
+    fontSize: "2rem",
+  },
+  "@media (max-width: 768px)": {
+    linksContainer: {
+      display: "none",
+    },
+    menuContainer: {
+      display: "block",
+    },
+  },
 };
 
 export default NavigationBar;

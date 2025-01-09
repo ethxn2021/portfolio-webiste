@@ -47,7 +47,7 @@ h1 {
   height: 24px;
   width: 24px;
   border-radius: 24px;
-  background-color: black;
+  background-color: rgb(7, 7, 7);
   position: absolute;
   top: 0;
   left: 0;
@@ -72,7 +72,7 @@ h1 {
   list-style: none;
   width: 25px;
   height: 25px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(2, 253, 44, 0.349);
   animation: animate 20s linear infinite;
   bottom: -150px;
   border-radius: 50%;
@@ -435,9 +435,42 @@ nav {
   height: 25px;
 }
 
-.deploymentLink button {
-  background-color: #00b300; /* Darker Green */
-  border-color: #00b318; /* Darker Green */
+.github-button {
+  background-color: #00b300; /* Green background */
+  color: #ffffff; /* White text */
+  padding: 10px 15px; /* Padding for button size */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline for links */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor pointer on hover */
+  display: inline-block; /* Display inline block for proper styling */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #005e00; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.deployment-button {
+  background-color: #28a745; /* Green background for Deployment/Video */
+  color: #ffffff; /* White text */
+  padding: 10px 15px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer on hover */
+  display: inline-block; /* Display inline-block */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.deployment-button:hover {
+  background-color: #1e7e34; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .button-container button {

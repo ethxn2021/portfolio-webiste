@@ -52,14 +52,14 @@ function App() {
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll(".circle");
     const colors = [
-      "#0cc2c4",
-      "#00bfd5",
-      "#00bbe7",
-      "#00b6f7",
-      "#00afff",
-      "#26a5ff",
-      "#6d99ff",
-      "#9c8aff",
+      "#0cf700",
+      "#0cd102",
+      "#02d147",
+      "#02d16d",
+      "#02d18c",
+      "#02d1af",
+      "#02c7d1",
+      "#0285d1",
     ];
 
     circles.forEach(function (circle, index) {

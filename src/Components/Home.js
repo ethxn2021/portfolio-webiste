@@ -5,8 +5,6 @@ import { FaReact } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 
-import { styles } from "./styles";
-
 const Home = () => {
   return (
     <div className="home-container">
@@ -23,70 +21,53 @@ const Home = () => {
                 pauseFor: 4000,
               }}
             />
+            {/* C:\Users\Ethan Williams{">"}<span className="vertical-line-animation"> |</span> */}
           </h1>
         </div>
 
-        <div className="terminal-screen" style={styles.terminalScreen}>
-          <div
-            className="terminal-selections"
-            style={styles.terminalSelections}
-          >
-            <span className="hidden-text" style={styles.hiddenText}>
+        <div className="terminal-screen">
+          <div className="terminal-selections">
+            <span className="hidden-text">
               PROBLEMS OUTPUT DEBUG CONSOLE{" "}
-              <span style={styles.activeTab}>TERMINAL</span> PORTS
+              <span style={{ color: "green", textDecoration: "underline" }}>
+                TERMINAL
+              </span>{" "}
+              PORTS
             </span>
-            <span className="terminal-option" style={styles.terminalOption}>
-              <AiOutlinePlus style={styles.icon} />
-              <FaRegTrashAlt style={styles.icon} />
-              <span style={styles.moreOptions}>...</span>
+            <span className="terminal-option">
+              <AiOutlinePlus /> <FaRegTrashAlt /> ...
             </span>
           </div>
           <br />
-          <div className="terminal-text" style={styles.terminalText}>
+          <div className="terminal-text">
             <div>
-              [{" "}
-              <span className="terminal-info" style={styles.info}>
-                Info
-              </span>{" "}
-              ] : Welcome to my portfolio, which consists of projects I have
-              completed or I'm working on. Check out my contact information
-              section to access my LinkedIn, etc.
+              [ <span className="terminal-info">Info</span> ] : Welcome to my
+              portfolio, which consists of projects I have completed or I'm
+              working on. Check out my contact information section to access my
+              LinkedIn, etc.
             </div>
             <br />
             <div>
-              [{" "}
-              <span className="terminal-info" style={styles.info}>
-                Info
-              </span>{" "}
-              ] : Feel free to scroll through the project images with the
-              buttons on it.
+              [ <span className="terminal-info">Info</span> ] : Feel free to
+              scroll through the project images with the buttons on it.
             </div>
             <br />
             <div>
-              [{" "}
-              <span className="terminal-info" style={styles.info}>
-                Info
-              </span>{" "}
-              ] : My Portfolio was made with React{" "}
-              <FaReact style={styles.reactIcon} />.
-              <button style={styles.button}>
+              [ <span className="terminal-info">Info</span> ] : My Portfolio was
+              made with react. <FaReact />
+              <button>
                 <a
-                  href="https://github.com/ethxn2021/portfolio-webiste"
+                  href="https://github.com/ethxn2021"
                   target="_blank"
                   rel="noreferrer"
-                  style={styles.link}
                 >
-                  GitHub Link
+                  Github link
                 </a>
               </button>
             </div>
             <br />
-            <div style={styles.terminalPrompt}>
-              C:\Users\Ethan Williams{">"}{" "}
-              <span className="vertical-line-animation" style={styles.cursor}>
-                ▯
-              </span>
-            </div>
+            C:\Users\Ethan Williams{">"}{" "}
+            <span className="vertical-line-animation">▯</span>
           </div>
         </div>
       </div>

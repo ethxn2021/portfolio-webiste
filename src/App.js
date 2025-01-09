@@ -22,12 +22,12 @@ import finalYearProj3 from "./Assets/finalYearProj3.png";
 import finalYearProj4 from "./Assets/finalYearProj4.png";
 
 import plantPot1 from "./Assets/plantPot1.jpg";
+
 import plantPot3 from "./Assets/plantPot3.png";
 
 import allthatcafeImg1 from "./Assets/allthatcafeImg1.png";
 import allthatcafeImg2 from "./Assets/allthatcafeImg2.png";
 import allthatcafeImg3 from "./Assets/allthatcafeImg3.png";
-import allthatcafeImg4 from "./Assets/allthatcafeImg4.png";
 
 import workInProgress from "./Assets/workInProgress.png";
 
@@ -36,7 +36,7 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
-// import { SiCsharp } from "react-icons/si";
+import { SiCsharp } from "react-icons/si";
 import { SiCplusplus } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { FaAngular } from "react-icons/fa";
@@ -76,25 +76,19 @@ function App() {
     };
 
     const animateCircles = () => {
-      let x = coords.x; // Current x-coordinate
-      let y = coords.y; // Current y-coordinate
+      let x = coords.x;
+      let y = coords.y;
 
-      circles.forEach((circle, index) => {
-        // Position the circle at the current coordinates
-        circle.style.left = `${x - 12}px`;
-        circle.style.top = `${y - 12}px`;
+      circles.forEach(function (circle, index) {
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
 
-        // Scale the circle based on its index (smaller as index increases)
-        circle.style.transform = `scale(${(circles.length - index) / 8})`;
+        circle.style.scale = (circles.length - index) / 8;
 
-        // Store the current position in the circle object for future reference
         circle.x = x;
         circle.y = y;
 
-        // Get the next circle or loop back to the first
         const nextCircle = circles[index + 1] || circles[0];
-
-        // Smoothly interpolate the position towards the next circle
         x += (nextCircle.x - x) * 0.7;
         y += (nextCircle.y - y) * 0.7;
       });
@@ -135,8 +129,8 @@ function App() {
           "CSS",
           <FaJava className="skillset-icon" />,
           "Java",
-          // <SiCsharp className="skillset-icon" />,
-          // "C#",
+          <SiCsharp className="skillset-icon" />,
+          "C#",
           <SiCplusplus className="skillset-icon" />,
           "C++",
           <SiTypescript className="skillset-icon" />,
@@ -216,12 +210,7 @@ function App() {
             }
             projectInformation="Reddit is a social platform where users share and discuss various types of content. This project uses the Reddit API to fetch and display posts, comments, and subreddit information in a user-friendly interface."
             deploymentLink={null}
-            imgPlaceHolder={[
-              allthatcafeImg2,
-              allthatcafeImg1,
-              allthatcafeImg3,
-              allthatcafeImg4,
-            ]}
+            imgPlaceHolder={[allthatcafeImg2, allthatcafeImg1, allthatcafeImg3]}
             flip={true}
           />
         </div>
@@ -229,7 +218,7 @@ function App() {
           <Portfolios
             projectName="All That Falafel Website"
             gameStack="React, Visual Studio Code, Figma"
-            githubLink={null}
+            githubLink=""
             projectInformation="Website for All That Falafel store based in London (Multiple Locations). All That Cafe falafel serves the best vegan wraps and meals. This website is currently in progress and will be made public soon"
             deploymentLink={null}
             imgPlaceHolder={[workInProgress]}
@@ -256,7 +245,7 @@ function App() {
             projectName="Smart Plant Pot"
             gameStack="Arduino, C++"
             githubLink="https://github.com/ethxn2021/Smart-Fan"
-            projectInformation="The Smart Plant Pot is designed for users to monitor the plant's levels through an application. The Blynk application and LED display indicate when the plant needs watering. Users can monitor soil moisture levels, temperature, and humidity. Additionally, users can monitor multiple different plants as they wish."
+            projectInformation="The Smart Plant Pot is designed for users to monitor the plant's levels through an application. The LED display indicate when the plant needs watering. Users can monitor soil moisture levels, temperature, and humidity. Additionally, users can monitor multiple different plants as they wish."
             deploymentLink={null}
             imgPlaceHolder={[plantPot1, plantPot3]}
             flip={true}

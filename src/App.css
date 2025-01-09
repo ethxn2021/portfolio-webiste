@@ -293,8 +293,8 @@ nav {
   min-height: 80vh;
   background: linear-gradient(
     135deg,
-    rgba(30, 42, 53, 0.5),
-    rgba(17, 45, 60, 0.5)
+    /* rgba(30, 42, 53, 0.5),
+    rgba(17, 45, 60, 0.5) */
   );
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SkillSection = ({ skillsetTitle, skills }) => {
   const renderedSkills = [];
@@ -12,16 +12,13 @@ const SkillSection = ({ skillsetTitle, skills }) => {
   }
 
   return (
-    <div className='skills-container'>
-      <div className='skills-section'>
+    <div className="skills-container">
+      <div className="skills-section">
         <h1>{skillsetTitle}</h1>
-        <div className='language-logos-container'>
-          {renderedSkills}
-        </div>
+        <div className="language-logos-container">{renderedSkills}</div>
       </div>
     </div>
   );
 };
 
 export default SkillSection;
-

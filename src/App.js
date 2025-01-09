@@ -209,7 +209,7 @@ function App() {
               "https://github.com/ethxn2021/reddit-client-codeacademy"
             }
             projectInformation="Reddit is a social platform where users share and discuss various types of content. This project uses the Reddit API to fetch and display posts, comments, and subreddit information in a user-friendly interface."
-            deploymentLink={null}
+            deploymentLink="https://reddit-client-app-ethxn.netlify.app/"
             imgPlaceHolder={[allthatcafeImg2, allthatcafeImg1, allthatcafeImg3]}
             flip={true}
           />

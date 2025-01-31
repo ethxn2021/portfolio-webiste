@@ -231,7 +231,9 @@ function App() {
             gameStack="React Native, SQL , Visual Studio Code, TypeScript"
             githubLink="https://github.com/ethxn2021/COMP600-GarageGlide-GroupProject"
             projectInformation="The Garage Glide project presents a web-based platform for facilitating  and managing car maintenance and repair services. The primary objective is to provide a seamless and efficient experience for both car owners and the auto repair shop staff."
-            deploymentLink={null}
+            deploymentLink={
+              "https://www.youtube.com/watch?v=cGuxxxktM0M&ab_channel=ethanwilliams"
+            }
             imgPlaceHolder={[
               finalYearProj1,
               finalYearProj2,

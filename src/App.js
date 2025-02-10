@@ -31,6 +31,10 @@ import allthatcafeImg3 from "./Assets/allthatcafeImg3.png";
 
 import workInProgress from "./Assets/workInProgress.png";
 
+import medwayCouncil from "./Assets/medway_council.png.jpg";
+import medwayCouncil1 from "./Assets/medway_council_1.png.jpg";
+import medwayCouncil2 from "./Assets/medway_council_2.png.jpg";
+
 import { FaPython } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
 import { FaHtml5 } from "react-icons/fa";
@@ -216,12 +220,14 @@ function App() {
         </div>
         <div>
           <Portfolios
-            projectName="All That Falafel Website"
-            gameStack="React, Visual Studio Code, Figma"
+            projectName="Youth Offending Team (YOT) app"
+            gameStack="React.js, JavaScript(ES6+), PHP, MySQL "
             githubLink=""
-            projectInformation="Website for All That Falafel store based in London (Multiple Locations). All That Cafe falafel serves the best vegan wraps and meals. This website is currently in progress and will be made public soon"
-            deploymentLink={null}
-            imgPlaceHolder={[workInProgress]}
+            projectInformation="A web app for the Youth Offending Team (YOT) to help young offenders stay connected with support workers, set goals, and plan their future. Built with React.js, PHP, and MySQL."
+            deploymentLink={
+              "https://www.medway.gov.uk/info/200703/youth_offending_team_yot_app"
+            }
+            imgPlaceHolder={[medwayCouncil, medwayCouncil1, medwayCouncil2]}
             flip={true}
           />
         </div>

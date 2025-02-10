@@ -29,7 +29,6 @@ import allthatcafeImg1 from "./Assets/allthatcafeImg1.png";
 import allthatcafeImg2 from "./Assets/allthatcafeImg2.png";
 import allthatcafeImg3 from "./Assets/allthatcafeImg3.png";
 
-import workInProgress from "./Assets/workInProgress.png";
 
 import medwayCouncil from "./Assets/medway_council.png.jpg";
 import medwayCouncil1 from "./Assets/medway_council_1.png.jpg";

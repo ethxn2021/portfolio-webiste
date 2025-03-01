@@ -14,7 +14,6 @@ import MafiaGameImg4 from "./Assets/mafiaGameImg4.png";
 import escapeTheGhosts1 from "./Assets/escapeTheGhosts1.png";
 import escapeTheGhosts2 from "./Assets/escapeTheGhosts2.png";
 import escapeTheGhosts3 from "./Assets/escapeTheGhosts3.png";
-import escapeTheGhosts4 from "./Assets/escapeTheGhosts4.png";
 
 import finalYearProj1 from "./Assets/finalYearProj1.png";
 import finalYearProj2 from "./Assets/finalYearProj2.png";
@@ -177,16 +176,16 @@ function App() {
         </div>
         <div>
           <Portfolios
-            projectName="Escape The Ghosts"
-            gameStack="Unity Game Engine, C#, Visual Studio, Figma"
-            githubLink="https://github.com/ethxn2021/Escape-The-Ghosts"
-            projectInformation="Escape The Ghosts is a game where the player has to escape the maze full of ghosts by collecting gems scattered across the map. The player has a gun and 4 health points with power-ups ready to be picked up."
-            deploymentLink={null}
+            projectName="Banklist-App"
+            gameStack="HTML, CSS, JavaScript"
+            githubLink="https://github.com/ethxn2021/Bank-list"
+            projectInformation="Bank List is a financial management app that helps users track transactions, view balances, and manage accounts easily.To log in, use js (1111), jd (2222).Once logged in, you’ll be redirected to your dashboard to check your balance and transaction history. If you have login issues, verify your credentials or contact support. 🚀
+"
+            deploymentLink={"https://bank-list-app2025.netlify.app/"}
             imgPlaceHolder={[
               escapeTheGhosts1,
               escapeTheGhosts2,
               escapeTheGhosts3,
-              escapeTheGhosts4,
             ]}
             flip={true}
           />
